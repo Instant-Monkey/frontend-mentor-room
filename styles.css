@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+html {
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: 'Spartan', sans-serif;
+  overflow: hidden;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: hsl(0, 0%, 27%);
+}
+p {
+  color: hsl(0, 0%, 73%);
+  line-height: 1.75rem;
+  letter-spacing: -0.5px;
+}
+
+.slider-title {
+  font-weight: 500;
+  font-size: 3.25rem;
+  color: hsl(0, 0%, 0%);
+  letter-spacing: -0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.slider-container {
+  height: 66vh;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 300vw;
+  transform: translateX(0);
+}
+
+.slider {
+  display: flex;
+  width: 100vw;
+}
+
+#slider-1 .slider-image {
+  background-image: url('images/desktop-image-hero-1.jpg');
+}
+#slider-2 .slider-image {
+  background-image: url('images/desktop-image-hero-2.jpg');
+}
+#slider-3 .slider-image {
+  background-image: url('images/desktop-image-hero-3.jpg');
+}
+
+.slider-image {
+  width: 58.33vw;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+
+.slider-text-container {
+  background-color: white;
+  width: 41.67vw;
+  height: 100%;
+  padding: 12vh 7vw;
+}
+
+.slider-text {
+}
+
+.slider-cta {
+  margin-top: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.slider-control-container {
+  position: absolute;
+  display: flex;
+  left: 58.33vw;
+  top: calc(66vh - 80px);
+}
+
+.slider-control {
+  background-color: black;
+  width: 5.555vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section-container {
+  height: 34vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 29.16vw 40.27vw 30.55vw;
+  grid-template-rows: 1fr;
+}
+
+.about-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  height: 100%;
+}
+
+.about-left-photo {
+  background-image: url('images/image-about-dark.jpg');
+}
+
+.about-middle-text {
+  padding: 8vh 4vw 4vh 4vw;
+
+  height: 100%;
+}
+
+.about-middle-text-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.5rem;
+}
+
+.about-right-photo {
+  background-image: url('images/image-about-light.jpg');
+}
