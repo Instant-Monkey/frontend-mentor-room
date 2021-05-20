@@ -29,6 +29,61 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
+  margin-top: 7vh;
+  margin-left: 4vw;
+  display: flex;
+  width: 25vw;
+  justify-content: space-between;
+}
+
+.logo {
+  padding-right: 1vw;
+}
+
+.nav-item {
+  position: relative;
+  color: white;
+  text-transform: lowercase;
+  font-size: 0.95rem;
+  display: flex;
+  align-self: center;
+  transition: all 0.2s ease-in-out;
+}
+.nav-item::before {
+  content: '';
+  left: 50%;
+  position: absolute;
+  bottom: -10px;
+  width: 0px;
+  height: 2px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: white;
+}
+.nav-item::after {
+  content: '';
+  right: 50%;
+  position: absolute;
+  bottom: -10px;
+  width: 0px;
+  height: 2px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: white;
+}
+.nav-item:hover {
+  cursor: pointer;
+}
+.nav-item:hover::before {
+  width: 25%;
+  opacity: 1;
+}
+.nav-item:hover::after {
+  width: 25%;
+  opacity: 1;
 }
 
 .slider-title {
@@ -78,6 +133,12 @@ p {
   padding: 12vh 7vw;
 }
 
+@media screen and (max-width: 1280px) {
+  .slider-text-container {
+    padding-top: 0;
+  }
+}
+
 .slider-text {
 }
 
@@ -87,11 +148,20 @@ p {
   letter-spacing: 1rem;
 }
 
+.slider-cta:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 73%);
+}
+
+.slider-cta:hover .arrow-right-symbol path {
+  fill: hsl(0, 0%, 73%);
+}
+
 .slider-control-container {
   position: absolute;
   display: flex;
   left: 58.33vw;
-  top: calc(66vh - 80px);
+  top: 56vh;
 }
 
 .slider-control {
@@ -102,6 +172,11 @@ p {
   justify-content: center;
   align-items: center;
 }
+.slider-control:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 27%);
+}
+
 .about-section-container {
   height: 34vh;
   width: 100%;
