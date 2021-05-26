@@ -13,6 +13,7 @@ html {
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 h1,
@@ -31,14 +32,21 @@ p {
   left: 0;
   z-index: 10;
   margin-top: 7vh;
-  margin-left: 4vw;
+  margin-left: 13vw;
   display: flex;
-  width: 25vw;
+  width: 17vw;
   justify-content: space-between;
 }
 
+.mobile-menu-cta {
+  display: none;
+}
+
 .logo {
-  padding-right: 1vw;
+  top: 7vh;
+  left: 4.5vw;
+  z-index: 1;
+  position: absolute;
 }
 
 .nav-item {
@@ -101,6 +109,7 @@ p {
   width: 300vw;
   transform: translateX(0);
   transition: transform ease-in-out 400ms;
+  overflow-x: hidden;
 }
 
 .slider {
@@ -129,14 +138,7 @@ p {
 .slider-text-container {
   background-color: white;
   width: 41.67vw;
-  height: 100%;
   padding: 12vh 7vw;
-}
-
-@media screen and (max-width: 1280px) {
-  .slider-text-container {
-    padding-top: 0;
-  }
 }
 
 .slider-text {
@@ -210,4 +212,147 @@ p {
 
 .about-right-photo {
   background-image: url('images/image-about-light.jpg');
+}
+
+@media screen and (max-width: 1240px) {
+  .slider-text-container {
+    padding-top: 0;
+  }
+  .about-middle-text {
+    padding-top: 1rem;
+  }
+  .slider-control-container {
+    left: calc(58.33vw - 5.555vw - 5.555vw);
+  }
+
+  .nav-container {
+    width: 25vw;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  html {
+    overflow-y: scroll;
+  }
+
+  .logo {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    top: 12.5vw;
+  }
+
+  .mobile-menu-cta {
+    display: block;
+    position: absolute;
+    top: 12.5vw;
+    left: 7.5vw;
+    z-index: 100;
+    transition: opacity ease-in-out 300ms;
+  }
+
+  .mobile-menu-cta:hover {
+    cursor: pointer;
+  }
+
+  #mobile-menu-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white;
+    width: 100vw;
+    height: 30vw;
+    z-index: 5;
+    transform: translateY(-60vw);
+    transition: opacity ease-in-out 300ms, transform ease-in-out 300ms;
+  }
+
+  .nav-container {
+    padding-left: 25vw;
+    margin-left: 0;
+    margin-top: 13vw;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+  }
+
+  .nav-container .nav-item {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    color: hsl(0, 0%, 0%);
+    transition-duration: 300ms;
+  }
+
+  #slider-container {
+    height: initial;
+  }
+  .slider {
+    flex-direction: column;
+  }
+
+  #slider-1 .slider-image {
+    background-image: url('images/mobile-image-hero-1.jpg');
+  }
+  #slider-2 .slider-image {
+    background-image: url('images/mobile-image-hero-2.jpg');
+  }
+  #slider-3 .slider-image {
+    background-image: url('images/mobile-image-hero-3.jpg');
+  }
+
+  .slider-image {
+    width: 100vw;
+    height: 97vw;
+  }
+
+  .slider-text-container {
+    width: 100vw;
+    padding: 10% 8vw;
+  }
+
+  .slider-title {
+    font-size: 2.35rem;
+  }
+
+  .slider-cta {
+    margin-bottom: 1.5rem;
+  }
+
+  .slider-control-container {
+    right: 0;
+    top: calc(97vw - 15vw);
+    left: initial;
+  }
+
+  .slider-control {
+    background-color: black;
+    width: 15vw;
+    height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-section-container {
+    height: initial;
+    grid-template-rows: 63.46vw 80.8vw 60.533vw;
+    grid-template-columns: 1fr;
+  }
+
+  .about-middle-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10vw 15vw;
+  }
+}
+
+.show {
+  visibility: initial !important;
+  opacity: 1 !important;
+}
+
+.hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
